@@ -1,0 +1,23 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fixing"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Commands="using:AppStudio.Common.Commands"
+    x:Class="Fixing.Fixe_conhecimento"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#ead770">
+        <TextBlock x:Name="TextoPergunta"  HorizontalAlignment="Left" Margin="33,163,0,0" TextWrapping="Wrap" Text="" TextAlignment="Center" VerticalAlignment="Top" FontSize="20" Foreground="Black" FontStyle="Italic" FontWeight="Bold" Width="327" Height="173" SelectionChanged="TextoPergunta_SelectionChanged" />
+        <TextBox x:Name="Textboxfixing1" HorizontalAlignment="Left" Height="161" Margin="33,389,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="327" TextChanged="TextBox_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="131,121,0,0" TextWrapping="Wrap" Text="Pergunta 1" VerticalAlignment="Top" FontSize="24" Foreground="Black" FontStyle="Italic" FontWeight="Bold" Width="129" Height="42" SelectionChanged="TextBlock_SelectionChanged" />
+        <Hub x:Name="Container" Margin="89,45,94,517" Background="{StaticResource AppBackground}" DataContext="{Binding}" HeaderTemplate="{StaticResource PageHeader}" Commands:SectionHeaderClickCommand.Command="{Binding SectionHeaderClickCommand}" FontFamily="Freestyle Script"/>
+        <Button BorderBrush="Black" Foreground="Black" Content="Proxima pergunta ->" HorizontalAlignment="Left" Margin="82,565,0,0" VerticalAlignment="Top" Width="218" Click="Button_Click"/>
+        <TextBlock  HorizontalAlignment="Left" Margin="49,349,0,0" TextWrapping="Wrap" Text="Coloque aqui sua resposta" VerticalAlignment="Top" FontSize="24" Foreground="Black" FontStyle="Italic" FontWeight="Bold" Width="304" Height="25" RenderTransformOrigin="0.434,5.02" />
+
+    </Grid>
+
+
+</Page>

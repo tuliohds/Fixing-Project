@@ -1,0 +1,25 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fixing"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Commands="using:AppStudio.Common.Commands"
+    x:Class="Fixing.Perguntas_Criadas"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#ead770">
+
+
+        <Hub x:Name="Container" Margin="87,44,96,545" Background="{StaticResource AppBackground}" DataContext="{Binding}" HeaderTemplate="{StaticResource PageHeader}" Commands:SectionHeaderClickCommand.Command="{Binding SectionHeaderClickCommand}" FontFamily="Freestyle Script"/>
+        <TextBlock FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="141,116,0,0" TextWrapping="Wrap" Text="Pergunta 1" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtp1" HorizontalAlignment="Left" TextAlignment="Center" Margin="40,155,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Height="108" Width="322" FontSize="20" Foreground="Black" FontStyle="Italic" FontWeight="Bold" SelectionChanged="txtp1_SelectionChanged" />
+        <TextBlock FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="141,285,0,0" TextWrapping="Wrap" Text="Pergunta 2" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtp2" HorizontalAlignment="Left" Margin="40,321,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="107" Width="322" FontSize="20" Foreground="Black" FontStyle="Italic" FontWeight="Bold" />
+        <TextBlock FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Margin="141,465,0,0" TextWrapping="Wrap" Text="Pergunta 3" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtp3" HorizontalAlignment="Left" Margin="40,509,0,30" TextAlignment="Center" TextWrapping="Wrap" Text="" Width="322" FontSize="20" Foreground="Black" FontStyle="Italic" FontWeight="Bold" />
+
+
+    </Grid>
+</Page>

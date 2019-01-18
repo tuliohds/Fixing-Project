@@ -1,0 +1,29 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fixing"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Commands="using:AppStudio.Common.Commands" xmlns:Controls="using:AppStudio.Common.Controls"
+    x:Class="Fixing.Dicas"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#ead770">
+        <Hub x:Name="Container" Margin="85,44,98,538" Background="{StaticResource AppBackground}" DataContext="{Binding}" HeaderTemplate="{StaticResource PageHeader}" Commands:SectionHeaderClickCommand.Command="{Binding SectionHeaderClickCommand}" FontFamily="Freestyle Script"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,144,0,0" TextWrapping="Wrap" Text="Faça e Refaça exercicios" VerticalAlignment="Top" FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,195,0,0" TextWrapping="Wrap" Text="Pesquise mais sobre o tema " VerticalAlignment="Top" FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,249,0,0" TextWrapping="Wrap" Text="     Continue aprendendo             (e praticando) coisas novas" VerticalAlignment="Top" FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,342,0,0" TextWrapping="Wrap" Text=" Ensine o que você aprende" VerticalAlignment="Top" FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,402,0,0" TextWrapping="Wrap" Text="Entenda como você aprende " VerticalAlignment="Top" FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="144,433,0,0" TextWrapping="Wrap" Text="melhor " VerticalAlignment="Top" FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,492,0,0" TextWrapping="Wrap" Text="Evite tentar fazer tudo " VerticalAlignment="Top" FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="92,517,0,0" TextWrapping="Wrap" Text="ao mesmo tempo" VerticalAlignment="Top" FontSize="25" Foreground="Black" FontStyle="Italic" FontWeight="Bold"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="10,621,-12,0" TextWrapping="Wrap" Text="Fonte:http://www.lendo.org/dicas-melhorar-aprendizado" VerticalAlignment="Top" FontSize="14" Foreground="Black" FontStyle="Italic" FontWeight="Bold"/>
+
+
+        <!--http://www.lendo.org/dicas-melhorar-aprendizado/-->
+    </Grid>
+
+</Page>

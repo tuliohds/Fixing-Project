@@ -1,0 +1,55 @@
+<base:PageBase
+    x:Class="Fixing.MainPage"
+    DataContext="{Binding ViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:was_commands="using:AppStudio.Common.Commands"
+    xmlns:was_actions="using:AppStudio.Common.Actions"
+    xmlns:base="using:Fixing"
+    xmlns:controls="using:Fixing.Controls"
+    xmlns:vm="using:Fixing.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource AppBackground}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <controls:PageHeaderControl x:Name="Header" LastUpdateDateTime="{Binding LastUpdated}" ShowBackButton="False" PageHeaderType="LogoText" HeaderText="{StaticResource AppTitle}" ShowSnappedMode="False"/>
+        <Hub x:Name="Container" Grid.Row="1" Padding="0,0,0,0" Margin="0,-18,0,0" DataContext="{Binding}" was_commands:SectionHeaderClickCommand.Command="{Binding SectionHeaderClickCommand}">
+        </Hub>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="SnappedView">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Container" Storyboard.TargetProperty="Orientation">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Orientation>Vertical</Orientation>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Header" Storyboard.TargetProperty="ShowSnappedMode">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="True"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="FullscreenView">
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <was_actions:ActionsCommandBar ActionsSource="{Binding Actions}" Visibility="{Binding HasActions, Converter={StaticResource BoolToVisibilityConverter}}"
+                                       Background="{StaticResource AppBarBackground}" BorderBrush="{StaticResource AppBarBackground}" Foreground="{StaticResource AppBarForeground}"/>
+    </Page.BottomAppBar>
+</base:PageBase>

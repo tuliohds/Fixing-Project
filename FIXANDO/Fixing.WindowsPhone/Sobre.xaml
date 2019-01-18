@@ -1,0 +1,31 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fixing"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="using:AppStudio.Common.Controls"
+    xmlns:Commands="using:AppStudio.Common.Commands"
+    x:Class="Fixing.Sobre"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#ead770">
+        <RichTextBlock TextAlignment="Center" FontSize="21" Foreground="Black" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" Height="506" Margin="19,90,0,0" VerticalAlignment="Top" Width="357" >
+            <Paragraph>
+                <Run Text="O aplicativo Fixing visa auxiliar estudantes, professores e estudiosos em geral para fixar o conhecimento. Por isto o nome: Fixing – Fixando(Tradução Livre).                      Nos tempos atuais não há mais necessidade de 'Caneta e papel' para anotar a pergunta e resposta 'daquela' questao que voce sabe que vai cair na prova, 'daquela' que voce sabe que é importante. Com o fixing voce pode anotar essas perguntas e respostas e, por exemplo, apos seus estudos, antes da prova, assim que acordar e etc você pode responder novamente a pergunta anterior e comparar com sua resposta anterior. Alem disso o aplicativo tambem fornece dicas para seu apredizado. "/>
+            </Paragraph>
+            
+        </RichTextBlock>
+
+
+
+
+        <Hub x:Name="Container" Margin="80,33,100,553" Background="{StaticResource AppBackground}" DataContext="{Binding}" HeaderTemplate="{StaticResource PageHeader}" Commands:SectionHeaderClickCommand.Command="{Binding SectionHeaderClickCommand}" FontFamily="Freestyle Script"/>
+        <TextBlock FontSize="21" Foreground="Black" FontStyle="Italic" HorizontalAlignment="Left" Margin="46,605,0,0" TextWrapping="Wrap" Text="Criador: Túlio Henrique dos Santos" VerticalAlignment="Top"/>
+
+
+
+
+    </Grid>
+</Page>

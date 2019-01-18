@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+    <Identity Name="c8c112f2-beaf-40b3-9fe2-eb417533d52e" Publisher="CN=AppStudio" Version="1.0.0.0" />
+
+    <mp:PhoneIdentity PhoneProductId="f20f8196-0eda-4505-872e-8c32c26874f4" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+    <Properties>
+        <DisplayName>AppStudio App</DisplayName>
+        <PublisherDisplayName>AppStudio</PublisherDisplayName>
+        <Logo>Assets\StoreLogo.png</Logo>
+    </Properties>
+
+    <Dependencies>
+        <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10069.0" MaxVersionTested="10.0.10069.0" />
+    </Dependencies>
+
+    <Resources>
+        <Resource Language="x-generate"/>
+    </Resources>
+
+    <Applications>
+        <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Fixing.App">
+            <uap:VisualElements DisplayName="Fixing"
+              Square150x150Logo="Assets\Logo.png"
+              Square44x44Logo="Assets\SmallLogo.png"
+              Description="The application is your friend for study and learning! In this app your first step is put five question and answer. In your second step your can answer the same questions and watch, compare the answer. Thus helping you to understand and fix knowledge."
+              BackgroundColor="#000000">
+                <uap:SplashScreen Image="Assets\SplashScreen.png" />
+            </uap:VisualElements>
+        </Application>
+    </Applications>
+
+    <Capabilities>
+        <Capability Name="internetClient" />
+    </Capabilities>
+</Package>
